@@ -1,5 +1,5 @@
 #labels StuddyBuddyTeam,AnantBhardwaj,DaveLuciano,JaiwonRhi,MikeOrtiz
-#Study Buddy Team
+#Study Buddy Team.
 
 = Study Buddy Team =
 
