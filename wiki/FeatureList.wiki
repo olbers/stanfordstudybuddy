@@ -1,9 +1,14 @@
 #summary StudyBuddy preliminary feature list.
-#labels featurelist
+#labels featurelist,studybuddyfeatures,smartstudyfeatures
 
 = Introduction =
 
-For CS247 Winter 2011, we're building a mobile web app that will let users log their study sessions over the course of the quarter and see how much time they're spending on their classes.
+For CS247 Winter 2011, we're building a mobile web app that will help students study smartly and efficiently.
+   * Student can check-in and check-out of a study location which will help their class mates know who is studying where and when.
+   * That will help a student know what their fellow students are doing and he can collaborate with them for a group study, a study session etc. in a real time.
+   * Also, it will help students find the place based on where his other class mates are studying.
+   * Since users log their study sessions over the course of the quarter (by checking-in and checking-out) awe can aggregate all the data and show lots of useful statistics like week by week course-load for a subject which can help future students plan things better.
+   * A comparison graph of previous statistics vs. the current time a student is putting for a subject would really help him get the feedback about whether he is putting up enough time for the subject or not. 
 
 = Feature List =
 
