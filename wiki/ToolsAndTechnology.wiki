@@ -1,4 +1,5 @@
 #summary Tools and Technology
+#labels StudyBuddy,StudyBuddyTools
 
 = Application Platform =
 
