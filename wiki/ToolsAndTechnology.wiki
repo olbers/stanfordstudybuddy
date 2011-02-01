@@ -1,0 +1,18 @@
+#Tools and Technology
+
+= Application Platform =
+
+The application would be implemented for Android phones. It would be tested on Android phones only. However, we expected it to work on iPhone as well.
+
+
+= Programming Language/Databases =
+
+  * 1. PHP (all server side business logic would be written in PHP)
+  * 2. Javascript (For dynamic interaction on the client side, we would use JavaScript. 
+  * 3. Database (MySql will be used for storing all kinds of data)
+
+= Third Party Tools =
+  * 1. jQuery (for some UI effects, we will use jQuery library)
+  * 2. ezSql (for ORM layer on the MySQl database)
+
+We will add more tools as we move along.
