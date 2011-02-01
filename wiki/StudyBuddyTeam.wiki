@@ -2,7 +2,7 @@
 
 = Study Buddy Team =
 
-  **Anant Bhardwaj* Architect, Engineering: owns the design (engineering)and implementation
-  **Dave Luciano* Lead, User Interface Design: owns the user interface and the interaction flow
-  **Jaiwon Rhi* Co-ordinator, Quality Owner: owns the quality and all the external communication.
-  **Mike Ortiz* Project Manager, User Testing: owns the schedule, internal communication, and helps team move smoothly 
+  * *Anant Bhardwaj* Architect, Engineering: owns the design (engineering)and implementation
+  * *Dave Luciano* Lead, User Interface Design: owns the user interface and the interaction flow
+  * *Jaiwon Rhi* Co-ordinator, Quality Owner: owns the quality and all the external communication.
+  * *Mike Ortiz* Project Manager, User Testing: owns the schedule, internal communication, and helps team move smoothly 
