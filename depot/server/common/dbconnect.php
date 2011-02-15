@@ -1,5 +1,10 @@
 <?php
 
+/**
+@author: Anant Bhardwaj
+@date: 02/14/2011
+*/
+
 //$hostname='127.0.0.1:3306';
 //$username='root';
 //$password='Anant$04';
@@ -11,6 +16,7 @@ $username='cs247';
 $password='P@ssw0rd';
 $dbname='cs247';
 @mysql_connect($hostname,$username, $password) or die ('Unable to connect to database! Please try again later.');
-@mysql_select_db($dbname) or die('Failed to load Database');
+
+define("DATABASE", $dbname);
 
 ?> 
