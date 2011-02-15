@@ -1,0 +1,24 @@
+User's motivation:
+
+1: people already motivated: many people have their defined study time tables and they regulary check if they
+   are on track with it or are behind the track etc... (they reserve library study rooms in advance)
+   
+   1. study reminder when you are not on track
+   2. we can further motivate them with stanadard data (accumulated over the period of time)
+
+   3. creating study groups
+
+2: for people with low motivation: 
+   1. invitation (reciprocity)
+   2. can get help in real time
+   3. social proof
+   4. suggestion (CS109 problem set#3 due on Feb 8. There are two groups who have planned study session at Meyer tomorrow.)
+
+Path: 
+
+  self monitoring (monitor youself against ideal study behavior)
+
+Triggers: 
+
+  commitment (I am going to study tomorrow at 5:00 PM [Engineering library]
+  incentives
