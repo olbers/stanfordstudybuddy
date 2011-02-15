@@ -3,17 +3,19 @@
 
 = Application Platform =
 
-The application would be implemented for Android phones. It would be tested on Android phones only. However, we expected it to work on iPhone as well.
+The application would be implemented for Android phones. It would be tested on Android phones only. However, in future we may plan to launch a web version and iPhone version.
 
+= High Level Architecture =
 
-= Programming Language/Databases =
+*1. /depot* - is the root of the source code repository
+*2. /depot/server* - root of all server side code
+*3. /depot/server/modules* - different server side modules (eg.. check-in, check-out, login, registration etc...)
+*4. /depot/server/common* - code that is shared across different modules (eg.. database connection code)
+*5. /depot/client/android* - root for the android client
+*6. /depot/client/web* - root for the web client (we are not doing it)
 
-  * 1. PHP (all server side business logic would be written in PHP)
-  * 2. Javascript (For dynamic interaction on the client side, we would use JavaScript. 
-  * 3. Database (MySql will be used for storing all kinds of data)
+All server modules are written in PHP. The back end database is in MySql.
 
-= Third Party Tools =
-  * 1. jQuery (for some UI effects, we will use jQuery library)
-  * 2. ezSql (for ORM layer on the MySQl database)
+All client side code is written in Java.
 
-We will add more tools as we move along.
+The HTTP is our primary communication channel. The client side makes HTTP requests to server modules. We use JASON as the data format for reading the server response.
