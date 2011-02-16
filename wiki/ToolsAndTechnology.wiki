@@ -7,12 +7,12 @@ The application would be implemented for Android phones. It would be tested on A
 
 = High Level Architecture =
 
-# /depot - is the root of the source code repository
-# /depot/server - root of all server side code
-# /depot/server/modules - different server side modules (eg.. check-in, check-out, login, registration etc...)
-# depot/server/common - code that is shared across different modules (eg.. database connection code)
-# /depot/client/android - root for the android client
-# /depot/client/web - root for the web client (we are not doing it)
+  # /depot - is the root of the source code repository
+  # /depot/server - root of all server side code
+  # /depot/server/modules - different server side modules (eg.. check-in, check-out, login, registration etc...)
+  # depot/server/common - code that is shared across different modules (eg.. database connection code)
+  # /depot/client/android - root for the android client
+  # /depot/client/web - root for the web client (we are not doing it)
 
 All server modules are written in PHP. The back end database is in MySql.
 
