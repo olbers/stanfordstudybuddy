@@ -27,7 +27,7 @@ public class StuddyBuddy extends Activity {
         setContentView(R.layout.main);
         String content="";
         try{
-            URL url = new URL ("http://stanford.edu/~anantb/cgi-bin/test.php?name=Anant");           
+            URL url = new URL ("http://cathysoft.net/studybuddy/test.php?name=Anant%20Bhardwaj");           
             //url.openConnection();
             
             InputStream in = url.openStream();            
