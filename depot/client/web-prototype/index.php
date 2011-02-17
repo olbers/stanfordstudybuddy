@@ -16,18 +16,20 @@ Study Buddy Main Page
 <table style="border-spacing:15px;">
 <tr>
 <td>
-<div style="background-image: url(resources/images/icon_myprofile.png); background-repeat:no-repeat; width:100px; height:100px; border:solid thin #CCC;" />
+<div style="background-image: url(resources/images/icon_myprofile.png); background-repeat:no-repeat; width:100px; height:100px; border:solid thin #CCC; cursor:pointer;" />
 </td>
 <td>
-<div style="background-image: url(resources/images/icon_checkinout.png); background-repeat:no-repeat; width:100px; height:100px; border:solid thin #CCC;" />
+<div style="background-image: url(resources/images/icon_checkinout.png); background-repeat:no-repeat; 
+width:100px; height:100px; border:solid thin #CCC; cursor:pointer;" 
+onclick="window.location = &quot;checkin.php&quot;;" />
 </td>
 </tr>
 <tr>
 <td>
-<div style="background-image: url(resources/images/icon_search.png); background-repeat:no-repeat; width:100px; height:100px; border:solid thin #CCC;" />
+<div style="background-image: url(resources/images/icon_search.png); background-repeat:no-repeat; width:100px; height:100px; border:solid thin #CCC; cursor:pointer;" />
 </td>
 <td>
-<div style="background-image: url(resources/images/icon_campusdata.png); background-repeat:no-repeat; width:100px; height:100px; border:solid thin #CCC;" />
+<div style="background-image: url(resources/images/icon_campusdata.png); background-repeat:no-repeat; width:100px; height:100px; border:solid thin #CCC; cursor:pointer;" />
 </td>
 </tr>
 </table>  
