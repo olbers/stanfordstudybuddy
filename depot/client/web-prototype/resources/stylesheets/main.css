@@ -48,9 +48,33 @@ table.icon{
 	border-spacing:0px;
 }
 
-.icon_text{
+.title-text{
 	font-weight:bold; 
 	color:#4D4D4D;
+}
+
+.gray-text{
+	font-weight:500;
+	color:#626262;
+}
+
+.section-title{
+  border-bottom:1px solid #666;
+  background-color:#E8E8E8;
+  padding:8px;
+}
+
+.cellClicker, .clickableCell {
+  cursor:pointer;
+  border-bottom:1px solid #666;
+  padding:8px;
+}
+
+p, div.wrapper {
+  background-color:#fff;
+  border:1px solid #666;
+  padding:10px;
+  margin:5px 0px;
 }
 
 
