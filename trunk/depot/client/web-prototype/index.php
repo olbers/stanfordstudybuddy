@@ -26,7 +26,7 @@ onclick="window.location = &quot;checkin.php&quot;;"/>
 </tr>
 <tr>
 <td class="icon">
-<span class="icon_text">My Profile</span>
+<span class="title-text">My Profile</span>
 </td>
 </tr>
 </table>
@@ -42,7 +42,7 @@ onclick="window.location = &quot;checkin.php&quot;;"/>
 </tr>
 <tr>
 <td class="icon">
-<span class="icon_text">Check-In</span>
+<span class="title-text">Check-In</span>
 </td>
 </tr>
 </table>
@@ -60,7 +60,7 @@ onclick="window.location = &quot;checkin.php&quot;;"/>
 </tr>
 <tr>
 <td class="icon">
-<span class="icon_text">Search</span>
+<span class="title-text">Search</span>
 </td>
 </tr>
 </table>
@@ -76,7 +76,7 @@ onclick="window.location = &quot;checkin.php&quot;;"/>
 </tr>
 <tr>
 <td class="icon">
-<span class="icon_text">Campus Data</span>
+<span class="title-text">Campus Data</span>
 </td>
 </tr>
 </table>
