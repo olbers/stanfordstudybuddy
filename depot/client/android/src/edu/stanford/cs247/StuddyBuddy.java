@@ -1,7 +1,10 @@
 package edu.stanford.cs247;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.webkit.*;
 import android.widget.TextView;
 
 import java.io.BufferedReader;
@@ -24,8 +27,11 @@ public class StuddyBuddy extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-        String content="";
+        //setContentView(R.layout.main);
+        //String content="";
+        
+       
+        /*
         try{
             URL url = new URL ("http://cathysoft.net/studybuddy/test.php?name=Anant%20Bhardwaj");           
             //url.openConnection();
@@ -42,9 +48,15 @@ public class StuddyBuddy extends Activity {
             content = mle.getMessage();
         }catch(Exception e){
             content = e.getMessage();
-        }
-        TextView tv = new TextView(this);
-        tv.setText(content);
-        setContentView(tv);
+        }*/
+        WebView webview = new WebView(this);
+        
+        webview.setWebViewClient(new WebViewClient());
+        webview.getSettings().setJavaScriptEnabled(true);
+        webview.loadUrl("http://cathysoft.net/studybuddy/web/");
+        
+       
+        setContentView(webview);
+        
     }
 }
