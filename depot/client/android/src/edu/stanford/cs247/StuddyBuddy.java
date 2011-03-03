@@ -1,17 +1,11 @@
 package edu.stanford.cs247;
 
 import android.app.Activity;
-import android.content.Intent;
-import android.net.Uri;
+import android.content.Context;
 import android.os.Bundle;
+import android.telephony.TelephonyManager;
 import android.webkit.*;
-import android.widget.TextView;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.MalformedURLException;
-import java.net.URL;
 
 /**
  * 
@@ -49,13 +43,17 @@ public class StuddyBuddy extends Activity {
         }catch(Exception e){
             content = e.getMessage();
         }*/
+        
+        TelephonyManager tManager = (TelephonyManager)this.getSystemService(Context.TELEPHONY_SERVICE);
+        String uid = tManager.getDeviceId();
+
         WebView webview = new WebView(this);
         
         webview.setWebViewClient(new WebViewClient());
         webview.getSettings().setJavaScriptEnabled(true);
-        webview.loadUrl("http://cathysoft.net/studybuddy/web/");
-        
-       
+        webview.setVerticalScrollBarEnabled(false);
+        webview.loadUrl("http://cs247.anantbhardwaj.com/index.php?login_id="+uid+"&browser=android");
+        //webview.loadUrl("http://cathysoft.net/studybuddy/web/");
         setContentView(webview);
         
     }
