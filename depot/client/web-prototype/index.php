@@ -86,6 +86,9 @@ onclick="window.location = &quot;checkin.php&quot;;"/>
   
 </div>  
 
+<!--
+http://localhost/mobile/
+-->
 
 <?php
 require_once "common/footer.php";
