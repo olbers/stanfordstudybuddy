@@ -2,7 +2,8 @@
 body {
   margin:0px 0px 75px 0px;
   padding:0px;
-  background: url('bg1.png') #CE0003 repeat-x;
+  /*background: url('bg1.png') #CE0003 repeat-x;*/
+  background-color:#ccc;
 }
 
 body, input, select, textarea, div, td {
@@ -12,9 +13,14 @@ body, input, select, textarea, div, td {
 
 #headerText {
   color:#fff;
-  margin:10px 0px;
+  margin:0px 0px 10px 0px;
+  padding:10px 0px;
   font-size:14pt;
   text-align:center;
+  background: #4c4c4c; /* old browsers */
+  background: -moz-linear-gradient(top, #4c4c4c 0%, #2c2c2c 50%, #000000 51%, #131313 100%); /* firefox */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4c4c4c), color-stop(50%,#2c2c2c), color-stop(51%,#000000), color-stop(100%,#131313));
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 ); /* ie */
 }
 
 #headerText img {
@@ -38,7 +44,7 @@ body, input, select, textarea, div, td {
 
 #curvyShell {
   background-color:#fff;
-  border:1px solid white;
+  border:1px solid #CE0003;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
   border-radius: 12px;
@@ -55,6 +61,7 @@ body, input, select, textarea, div, td {
   -moz-border-radius-topright: 12px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+  
 }
 
 .curvyHeadingSpacer {
@@ -66,39 +73,36 @@ body, input, select, textarea, div, td {
   margin:0px 12px;
 }
 
-.clickableTable {
-  width:101%;
+.clickableTable, .deleteableTable, .formattedTable, .checkableTable {
+  width:100%;
   border-collapse:collapse;
-  margin:-1px;
 }
 
-.clickableTable td {
+.clickableTable td, .deleteableTable td, .checkableTable td {
   border-bottom:1px solid #000;
   padding:10px 7px;
   cursor:pointer;
+}
+
+.formattedTable td {
+  border-bottom:1px solid #000;
+  padding:10px 7px;
+}
+
+.clickableTable td {
   background:url('arrowicon.png') no-repeat center right;
+}
+
+.deleteableTable td {
+  background:url('deleteicon.png') no-repeat center right;
+}
+
+.checkableTable td.checked {
+  background:url('checkmark.png') no-repeat center right;
 }
 
 .lastClickableCell {
   border-bottom:0px !important;;
-}
-
-#homeLinks {
-  width:100%;
-}
-
-#homeLinks td {
-  text-align:center;
-  font-weight:bold;
-  padding:5px;
-  margin:5px;
-  width:50%;
-  background-color:#fff;
-  border:1px solid white;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  border-radius: 12px;
-  cursor:pointer;
 }
 
 #checkedIn {
@@ -133,6 +137,16 @@ body, input, select, textarea, div, td {
   background-color:#fff;
 }
 
+.userPic {
+  width:64px;
+  height:64px;
+}
+
+.locationProfilePic {
+  width:100px;
+  height:100px;
+}
+
 input[type="text"], input[type="submit"], input[type="button"], select {
   border:1px solid black;
   font-weight:bold;
@@ -158,10 +172,10 @@ input[type="submit"], input[type="button"] {
   bottom:0px;
   text-align:center;
   width:100%;
-  background: #e2e2e2; /* old browsers */
-  background: -moz-linear-gradient(top, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe 100%); /* firefox */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e2e2e2), color-stop(50%,#dbdbdb), color-stop(51%,#d1d1d1), color-stop(100%,#fefefe)); /* webkit */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=0 ); /* ie */
+  background: #4c4c4c; /* old browsers */
+  background: -moz-linear-gradient(top, #4c4c4c 0%, #2c2c2c 50%, #000000 51%, #131313 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4c4c4c), color-stop(50%,#2c2c2c), color-stop(51%,#000000), color-stop(100%,#131313));
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 );
 }
 
 .bottomNavButton {
@@ -175,13 +189,10 @@ input[type="submit"], input[type="button"] {
 }
 
 .selectableBox {
-  display:block;
-  float:left;
-  width:64px;
+  width:75px;
   border:2px solid black;
-  margin:5px;
   text-align:center;
-  padding:20px 5px;
+  padding:16px 4px;
   cursor:pointer;
 }
 
@@ -201,4 +212,17 @@ input[type="submit"], input[type="button"] {
 
 .ratingBoxSelected {
   background: url('sound_on.png') no-repeat center center !important;
+}
+
+#classList, #placeList {
+  margin:3px auto;
+}
+
+#searchBar {
+  margin:5px;
+  text-align:center;
+}
+
+.hiddenPerson {
+  display:none;
 }
