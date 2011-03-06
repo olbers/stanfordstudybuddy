@@ -2,8 +2,10 @@
 
 require_once "dbconnect.php";
 
+require_once "functions.php";
+
 $locationData = array();
-$sql = "SELECT * FROM cs247.Location";
+$sql = "SELECT * FROM cs247.Location ORDER BY location_name";
 $result = @mysql_query($sql);
 while($data = mysql_fetch_assoc($result)) {
   $locationData[$data['id']] = array('name' => $data['location_name']);
@@ -25,15 +27,16 @@ require_once "user_info.php";
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js" type="text/javascript"></script>
 <script src="scripts.js" type="text/javascript"></script>
 <script src="cufon-yui.js" type="text/javascript"></script>
+<script src="droid-sans.fonts.js" type="text/javascript"></script>
 <script src="grobold.fonts.js" type="text/javascript"></script>
 <script type="text/javascript">
-  Cufon.replace('#headerText span, .curvyHeading, .notice', { fontFamily: 'GROBOLD' }); 
+  Cufon.replace('.curvyHeading, .notice', { fontFamily: 'Droid Sans Bold' }); 
+  Cufon.replace('#headerText span', { fontFamily: 'Droid Sans Bold' }); 
 </script>
 
 </head>
 <body>
 
 <div id="headerText">
-  <!--<div id="headerBack"><a href="javascript:goHomeView()">&laquo; Home</a></div>-->
   <span>StudyBuddy</span>
 </div>

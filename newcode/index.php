@@ -21,16 +21,10 @@ var checkedIn = true;
     <div class="curvyHeading"><img src="clear.gif" class="curvyHeadingSpacer" />Your Study Session...</div>
     <div class="viewPadding">
       <?php
-        //Array ( [id] => 6 [start_time] => 1299133730 [end_time] => 0 [location_id] => 1 [user_id] => 1 [course_id] => 2 [rating] => 5 )
         
         $sessionLength = time() - $userInfo['studySession']['start_time'];
-        $hours = ($sessionLength - $sessionLength % 3600) / 3600;
-        if($hours < 10) $hours = "0{$hours}";
-        $minutes = (($sessionLength % 3600) - (($sessionLength % 3600) % 60)) / 60;
-        if($minutes < 10) $minutes = "0{$minutes}";
-        
         print "<p>You've been studying at <b>{$userInfo['studySession']['location_name']}</b> for...</p>";
-        print "<p align='center'><b>{$hours}:{$minutes}</b></p>"; 
+        print "<p align='center'><b>" . formatStudyLengthTime($sessionLength) . "</b></p>"; 
         
       ?>
       
@@ -42,19 +36,24 @@ var checkedIn = true;
   
   <div id="curvyShell">
     <div class="curvyHeading"><img src="clear.gif" class="curvyHeadingSpacer" />Update course you're working on...</div>
-    <div class="viewPadding" id="classList">
+    <table id="classList" cellspacing="6">
       <?php
-      foreach($userInfo['courses'] as $id => $info) {
-        if($userInfo['studySession']['course_id'] == $id) {
-          print '<div class="selectableBox selectCourse selectableBoxHighlighted" rel="' . $id . '">' . $info['name'] . '</div>';
-        } else {
-          print '<div class="selectableBox selectCourse" rel="' . $id . '">' . $info['name'] . '</div>';
+        $count = 0;
+        foreach($userInfo['courses'] as $id => $info) {
+          if($count % 3 == 0) print '<tr>';
+          if($userInfo['studySession']['course_id'] == $id) {
+            print '<td class="selectableBox selectCourse selectableBoxHighlighted" rel="' . $id . '">' . $info['name'] . '</td>';
+          } else {
+            print '<td class="selectableBox selectCourse" rel="' . $id . '">' . $info['name'] . '</td>';
+          }
+          
+          
+          if($count % 3 == 2) print '</tr>';
+          $count++;
         }
-      }
       ?>
-      <input type="hidden" name="checkin-course" id="checkin-course" value="0" />
-      <div class="clearerDiv"></div>
-    </div>
+    </table>
+    <input type="hidden" name="checkin-course" id="checkin-course" value="0" />
   </div>
   
   <div id="curvyShell">
@@ -77,7 +76,14 @@ var checkedIn = true;
 
 </div>
 
-<?
+<script language="JavaScript" type="text/javascript">
+<!--
+  setTimeout("location.reload(true)", 600000);
+//-->
+</script>
+
+
+<?php
 
 } else { // No study session, show ability to check in to favorites
 
@@ -89,30 +95,35 @@ var checkedIn = true;
   
   <div id="curvyShell">
     <div class="curvyHeading"><img src="clear.gif" class="curvyHeadingSpacer" />Where are you studying?</div>
-    <div class="viewPadding">
+    <table id="placeList" cellspacing="6">
       <?php
-      $count = 0;
-      foreach($locationData as $id => $info) {
-        print '<div class="selectableBox selectPlace" rel="' . $id . '">' . $info['name'] . '</div>';
-        $count++;
-        if($count == 3) break;
-      }
-      
+        $count = 0;
+        foreach($locationData as $id => $info) {
+          if($count % 3 == 0) print '<tr>';
+          print '<td class="selectableBox selectPlace" rel="' . $id . '">' . $info['name'] . '</td>';
+          if($count % 3 == 2) print '</tr>';
+          $count++;
+          if($count == 3) break;
+        }
       ?>
-      <div class="clearerDiv"></div>
-      <input type="hidden" name="checkin-place" id="checkin-place" value="0" />
-    </div>
+    </table>
+    <input type="hidden" name="checkin-place" id="checkin-place" value="0" />
   </div>
   
   <div id="curvyShell">
     <div class="curvyHeading"><img src="clear.gif" class="curvyHeadingSpacer" />What class are you working on?</div>
-    <div class="viewPadding" id="classList">
-      <div class="selectableBox selectCourse" rel="1">CS 247</div>
-      <div class="selectableBox selectCourse" rel="2">CS 109</div>
-      <div class="selectableBox selectCourse" rel="3">CS 142</div>
-      <input type="hidden" name="checkin-course" id="checkin-course" value="0" />
-      <div class="clearerDiv"></div>
-    </div>
+    <table id="classList" cellspacing="6">
+      <?php
+        $count = 0;
+        foreach($userInfo['courses'] as $id => $info) {
+          if($count % 3 == 0) print '<tr>';
+          print '<td class="selectableBox selectCourse" rel="' . $id . '">' . $info['name'] . '</td>';
+          if($count % 3 == 2) print '</tr>';
+          $count++;
+        }
+      ?>
+    </table>
+    <input type="hidden" name="checkin-course" id="checkin-course" value="0" />
   </div>
   
   <div id="curvyShell">
