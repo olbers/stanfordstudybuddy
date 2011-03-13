@@ -8,6 +8,21 @@ $loudnessRating = array(
   5 => 'Very Loud',
 );
 
+// Returns a user's favorite locations
+function getFaveLocations($userID, $num = 3) {
+  $userID = (int) $userID;
+  $num = (int) $num;
+  $sql = "SELECT COUNT(*) AS `rows`, `location_id` FROM `cs247`.`StudySession` WHERE `user_id` = '{$userID}' GROUP BY `location_id` ORDER BY `rows` DESC LIMIT {$num}";
+  $result = @mysql_query($sql);
+  $locations = array();
+  while($l = mysql_fetch_assoc($result)) {
+    $sql = "SELECT * FROM cs247.Location WHERE id = '{$l['location_id']}' LIMIT 1";
+    $locData = mysql_fetch_assoc(@mysql_query($sql));
+    $locations[$locData['id']] = array('name' => $locData['location_name'], 'id' => $locData['id']);
+  }
+  return $locations;
+}
+
 function findNearbyLocations($longitude, $latitude) {
   $sql = "SELECT * FROM cs247.Location WHERE (location_latitude < ({$latitude} + 0.001372)) AND (location_latitude > ({$latitude} - 0.001372)) AND (location_longitude < ({$longitude} + 0.001372)) AND (location_longitude > ({$longitude} - 0.001372))";
   return $sql;

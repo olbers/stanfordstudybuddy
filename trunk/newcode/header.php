@@ -1,5 +1,7 @@
 <?php
 
+if($_GET['errors'] != 1) error_reporting(0); // Shut off error reporting
+
 require_once "dbconnect.php";
 
 require_once "functions.php";

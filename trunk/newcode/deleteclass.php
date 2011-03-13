@@ -26,7 +26,7 @@ if($_GET['confirmed'] == 1) { // Really delete the class
     <div class="viewPadding">
       <p>Are you sure you want to remove</p>
       <p align="center"><b style="font-size:125%;"><?php print $userInfo['courses'][$courseID]['name']; ?></b></p>
-      <p>from your list of classes? Study data for this class will remain in tact.</p>
+      <p>from your list of classes? Study data for this class will also be deleted.</p>
       <p align="center"><input type="button" value="Yes, delete it!" onclick="window.location='deleteclass.php?courseID=<?php print $courseID; ?>&confirmed=1'" /> <input type="button" value="Nevermind!" onclick="window.location='myprofile.php'" /></p>
     </div>
   </div>

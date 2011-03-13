@@ -1,9 +1,35 @@
 <?php
 
+/*
 if($_GET['browser'] == "android") { // In native app
   $userInfo = array('id' => $_GET['login_id']);
-} else { // Not in native app
-  $userInfo = array('id' => 1);
+} else
+*/
+
+if($_COOKIE['userid'] > 0) {
+  $userInfo = array('id' => (int) $_COOKIE['userid']);
+} else { // Not logged in... send to login!
+  $filePath = explode("/", $_SERVER['PHP_SELF']);
+  $fileName = $filePath[count($filePath)-1];
+  if($fileName != "login.php") header("Location: login.php");
+}
+
+if($_GET['get'] == 1) print_r($_GET);
+
+// Get user name & info
+$sql = "SELECT * FROM cs247.User WHERE id = '{$userInfo['id']}' LIMIT 1";
+$result = @mysql_query($sql);
+if(mysql_num_rows($result) > 0) {
+  $userInfo = array_merge($userInfo, mysql_fetch_assoc($result));
+}
+
+// Deal with user location; default values are -1 (location can't be accessed)
+if(isset($_GET['longitude']) && $_GET['longitude'] != -1 && isset($_GET['latitude']) && $_GET['latitude'] != -1) { // Location is being passed in via the app
+  //print "Updating Location";
+  $userInfo['user_longitude'] = round($_GET['latitude'], 6); // Anant has them reversed in the native APK
+  $userInfo['user_latitude'] = round($_GET['longitude'], 6); // This is a fix for that
+  $sql = "UPDATE cs247.User SET user_longitude = '{$userInfo['user_longitude']}', user_latitude = '{$userInfo['user_latitude']}' WHERE id = '{$userInfo['id']}' LIMIT 1";
+  @mysql_query($sql);
 }
 
 // See if they have an active study session

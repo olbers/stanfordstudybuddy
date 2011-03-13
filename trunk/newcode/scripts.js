@@ -22,6 +22,11 @@ $(document).ready(function() {
   $(".selectPlace").click(function() {
     var placeID = parseFloat($(this).attr('rel'));
     $("#checkin-place").val(placeID);
+    
+    $("#placeList td").each(function(index) {
+      if($(this).attr('rel') != placeID) $(this).removeClass('selectableBoxHighlighted');
+    });
+    
   });
   
   $(".selectCourse").click(function() { 
@@ -40,4 +45,29 @@ $(document).ready(function() {
 function showMorePeople() {
   $(".hiddenPerson").fadeIn();
   $("#showMorePeopleButton").hide();
+}
+
+function showSearchForm(show, hide) {
+  $("#" + show).show();
+  $("#" + hide).hide();
+  $("#searchSelector span").toggleClass('searchSelected');
+}
+
+function showStudyData(show) {
+  $(".curvyShell").each(function(index) {
+    var name = $(this).attr('id');
+    if(name == show + "-data") {
+      $(this).show();
+    } else {
+      $(this).hide();
+    }
+  });
+  $("#studyDataSelector span").each(function(index) {
+    var name = $(this).attr('id');
+    if(name == show + "-button") {
+      $(this).addClass('studyDataSelected');
+    } else {
+      $(this).removeClass('studyDataSelected');
+    }
+  });
 }
