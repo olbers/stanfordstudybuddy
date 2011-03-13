@@ -41,7 +41,7 @@ if(strlen($locData['location_name'])) { // Location exists
   <p align="center"><input type="button" onclick="history.go(-1)" value="&laquo; Results" /></p>
   
   <?php
-    $sql = "SELECT c.course_number, u.first_name, u.last_name FROM cs247.StudySession AS s, cs247.Course AS c, cs247.User AS u WHERE s.location_id = '{$locationID}' AND s.end_time = 0 AND s.course_id = c.id AND s.user_id = u.id ORDER BY s.start_time ASC";
+    $sql = "SELECT c.course_number, u.first_name, u.last_name, c.id FROM cs247.StudySession AS s, cs247.Course AS c, cs247.User AS u WHERE s.location_id = '{$locationID}' AND s.end_time = 0 AND s.course_id = c.id AND s.user_id = u.id ORDER BY s.start_time ASC";
     $result = @mysql_query($sql);
     $numPeople = mysql_num_rows($result);
     
@@ -60,9 +60,14 @@ if(strlen($locData['location_name'])) { // Location exists
           if($count > 5) {
             print ' class="hiddenPerson';
             if($count == $numPeople) print ' lastClickableCell';
+            if($data['id'] == $_GET['course']) print ' highlightedRow';
             print '"';
-          } elseif($numPeople < 5 && $count == $numPeople) {
-            print ' class="lastClickableCell"';
+          } elseif($numPeople <= 5 && $count == $numPeople) {
+            print ' class="lastClickableCell';
+            if($data['id'] == $_GET['course']) print ' highlightedRowLast';
+            print '"';
+          } elseif($data['id'] == $_GET['course']) {
+            print ' class="highlightedRow"';
           }
           print '><b>' . $data['first_name'] . ' ' . $data['last_name'] . '</b> is studying <b>' . $data['course_number'] . '</b>.</td>';
           print '</tr>';

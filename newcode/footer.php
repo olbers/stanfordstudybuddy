@@ -6,42 +6,38 @@ $fileName = $filePath[count($filePath)-1];
 ?>
 
 <div id="bottomNavBar">
-  <div class="bottomNavButton"><a href="index.php">
-    <?php
+  <div class="bottomNavButton"><a href="index.php"><?php
       if($fileName == "index.php") {
         print '<img src="icon_home_on.png" />';
       } else {
         print '<img src="icon_home.png" />';
       }
-    ?>
-  </a></div>
-  <div class="bottomNavButton"><a href="myprofile.php">
-    <?php
-      if($fileName == "myprofile.php" || $fileName == "addclass.php" || $fileName == "deleteclass.php") {
+    ?></a></div><div class="bottomNavButton"><a href="myprofile.php"><?php
+      if($fileName == "myprofile.php" || $fileName == "addclass.php" || $fileName == "deleteclass.php" || $fileName == "userdata.php") {
         print '<img src="icon_myprofile_on.png" />';
       } else {
         print '<img src="icon_myprofile.png" />';
+        
       }
-    ?>
-  </a></div>
-  <div class="bottomNavButton"><a href="search.php">
-    <?php
+    ?></a></div><div class="bottomNavButton"><a href="search.php"><?php
       if($fileName == "search.php" || $fileName == "locationprofile.php") {
         print '<img src="icon_search_on.png" />';
       } else {
         print '<img src="icon_search.png" />';
       }
-    ?>
-  </a></div>
-  <div class="bottomNavButton"><a href="campus-data.php">
-    <?php
+    ?></a></div><div class="bottomNavButton"><a href="campus-data.php"><?php
       if($fileName == "campus-data.php") {
         print '<img src="icon_campusdata_on.png" />';
       } else {
         print '<img src="icon_campusdata.png" />';
       }
-    ?>
-  </a></div>
+    ?></a></div><!--<div class="bottomNavButton"><a href="logout.php"><?php
+      if($fileName == "logout.php") {
+        print '<img src="icon_logout_on.png" />';
+      } else {
+        print '<img src="icon_logout.png" />';
+      }
+    ?></a></div>-->
 </div>
 
 </body>
