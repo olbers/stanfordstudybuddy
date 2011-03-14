@@ -68,6 +68,10 @@ write a native android app that would make a HTTP request to a server side back-
 <div class="box">
 <h1>4. Alpha Prototype</h1>
 <hr />
+<p>
+For this phase, we aimed to get the check in and check out functionality implemented.
+ We also gave it an initial black/white/grey-scale design that would eventually go through several iterations.
+ </p>
 <div style="margin:0px auto; text-align:center;">
 <img src="resources/images/process/alpha-1.png" alt="resources/images/process/alpha-1.png" style="margin:0px auto; width:333px; height:492px;"  />
  <br />
@@ -91,6 +95,12 @@ write a native android app that would make a HTTP request to a server side back-
 <div class="box">
 <h1>5. Beta Prototype</h1>
 <hr />
+<p>
+For this phase, we aimed to implement the remaining functionality, such as searching locations, and adding/deleting classes from your profile. 
+We also aimed to streamline our checkin process by chucking the old homepage and making the homepage the actual checkin page. Thus, you could 
+now check in by clicking 4 times, whereas in our previous iteration, 
+the user had to find the check in page and then go through the process.
+</p>
 <div style="margin:0px auto; text-align:center;">
 <img src="resources/images/process/beta-1.png" alt="resources/images/process/beta-1.png" style="margin:0px auto; width:333px; height:492px;"  />
  <br />
@@ -130,6 +140,11 @@ write a native android app that would make a HTTP request to a server side back-
 <div class="box" id="finalversion">
 <h1>7. Final Version</h1>
 <hr />
+<p>
+For the final version, we redid the layout and made a lot of UI tweaks. The changes were all based on feedback from user testing and 
+from our own internal debates on how things should look. Compared to our beta prototype, our final version is much more professional 
+looking and feels more like a mobile app.
+</p>
 <div style="margin:0px auto; text-align:center;">
 <img src="resources/images/process/final-1.png" alt="resources/images/process/final-1.png" style="margin:0px auto; width:333px; height:492px;"  />
  <br />
