@@ -15,9 +15,11 @@
 
 #logo{
 	height:45px;
-	width:455px;
+	width:190px;
 	padding:0px;
-	background: url(../images/logo-red.png) no-repeat;
+	text-decoration:none;
+	color:#FFF;
+	font-size:30px;
 }
 
 #header{
@@ -50,9 +52,9 @@ table.page{
 
 table.page tr td.main-panel{
 	vertical-align:top;
-	width:700px;	
-	padding-left:30px;
-	padding-right:30px;
+	width:640px;	
+	padding-left:20px;
+	padding-right:20px;
 	padding-top:5px;
 	padding-bottom:5px;
 }
