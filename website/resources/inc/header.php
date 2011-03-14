@@ -7,13 +7,19 @@
   <head>
     <title>Study Buddy</title>
     <link rel="stylesheet" type="text/css" href="resources/stylesheets/style.css" />	
+    <script src="resources/inc/cufon-yui.js" type="text/javascript"></script>
+	<script src="resources/inc/droid-sans.fonts.js" type="text/javascript"></script>
+    <script src="resources/inc/grobold.fonts.js" type="text/javascript"></script>
+	<script type="text/javascript">
+      Cufon.replace('#logo', { fontFamily: 'Droid Sans Bold' }); 
+    </script>
   </head>
   <body style="height:100%;">
   
 
   <div id="header">
    <div id="wrap-head">
-   <a id="logo" style="display:block; padding:0px; margin:0px;" href="index.php"></a>
+   <a id="logo" style="display:block; padding:0px; margin:0px;" href="index.php">Study Buddy</a>
    </div>
   </div>
   
@@ -25,7 +31,7 @@
     <!--<div style="background-color:#870701; border:#870701 thick solid;"> -->
     <div style="background:url(resources/images/contentbg.png); repear-x; border-radius:10px;">
     <div class="wrap" style="margin:auto;">
-    <h1>Study Buddy</h1>
+    <h1>Project</h1>
     <p>
     <a href="index.php">Home</a> <br />
     <a href="process.php">Process</a> <br />

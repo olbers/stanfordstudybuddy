@@ -15,8 +15,8 @@
     function startSlideShow(i){
 		j = (i%14)+1;
         var element_ = document.getElementById("page_home");
-		//element_.style.background="url(resources/images/home/slides/screen-"+j+".png)";
-        var src= "<img src=\"resources/images/home/slides/screen-" +j+".png\"" +" alt=\"resources/images/home/slides/screen-" +j+".png\"" +" style=\"height:491px; width:332px;\" />";
+		//element_.style.background="url(resources/images/home/slides/screen-"+j+".png)";		
+        var src = "<img src=\"resources/images/home/slides/screen-" +j+".png\"" +" alt=\"resources/images/home/slides/screen-" +j+".png\"" +" style=\"height:491px; width:332px;\" />";
 		element_.innerHTML=src;
 		//
 		
@@ -35,7 +35,7 @@
 
   <div id="header">
    <div id="wrap-head">
-   <a id="logo" style="display:block; padding:0px; margin:0px;" href="index.php"></a>
+   <a id="logo" style="display:block; padding:0px; margin:0px;" href="index.php">Study Buddy</a>
    </div>
   </div>
   
@@ -47,7 +47,7 @@
     <!--<div style="background-color:#870701; border:#870701 thick solid;"> -->
     <div style="background:url(resources/images/contentbg.png); repear-x; border-radius:10px;">
     <div class="wrap" style="margin:auto;">
-    <h1>Study Buddy</h1>
+    <h1>Project</h1>
     <p>
     <a href="index.php">Home</a> <br />
     <a href="process.php">Process</a> <br />
@@ -91,7 +91,11 @@
 
     
     <td class="main-panel" style="text-align:center">
-    <div id="page_home" style="margin: 0px auto; text-align:center;" class="wrap">
+    <div class="box">
+    <h1> Slide Show </h1>
+	<hr />
+    <div id="page_home" style="margin: 0px auto; text-align:center;">
+    </div>
     </div>
     </td>
 <?php
