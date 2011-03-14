@@ -3,19 +3,18 @@
 
 = Application Platform =
 
-The application would be implemented for Android phones. It would be tested on Android phones only. However, in future we may plan to launch a web version and iPhone version.
+The application would be implemented for Android phones. It would be tested on Android phones only. We also have a web version with some limited functionaries. We do have a plan to port the app to iPhone in future. 
 
-= High Level Architecture =
+= High Level Overview =  
 
-  # */depot* - is the root of the source code repository
-  # */depot/server* - root of all server side code
-  # */depot/server/modules* - different server side modules (eg.. check-in, check-out, login, registration etc...)
-  # */depot/server/common* - code that is shared across different modules (eg.. database connection code)
-  # */depot/client/android* - root for the android client
-  # */depot/client/web* - root for the web client (we are not doing it)
+All modules are written in PHP. The back-end database is in MySql.
 
-All server modules are written in PHP. The back end database is in MySql.
+We started with a client server architecture where we planned to write a native android app that would make a HTTP request to a server side back-end module to get data in JSON/XML and do a native rendering.
 
-All client side code is written in Java.
+However after the alpha phase, we dropped the idea of native UI rendering and we used android native webkit which could allow us to still use all native functionalities we wanted to use (like detecting the unique device id of the phone so that we could avoid making user log-in and GPS) and yet render a html.
 
-The HTTP is our primary communication channel. The client side makes HTTP requests to server modules. We use JASON as the data format for reading the server response.
+  
+  # */depot/client/android* - our native code  
+  # */newcode* - root of our server side code (which is in use)
+  # */depot/client/web-prototype* - root of our alpha prototype (we are not using it)
+  # */website* - root of our website
