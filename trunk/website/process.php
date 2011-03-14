@@ -120,6 +120,13 @@ the user had to find the check in page and then go through the process.
 <div class="box">
 <h1>6. User Testing</h1>
 <hr />
+<p>
+We tested on 8 users studying in GCC(a casual graduate student union)
+and Meyer library (a quiet study spot) to ask them about their study
+logging experience and gained 68% positive feedbacks.</p>
+<p>
+We also conducted a FiveSecondTest to measure the average time spent on
+check-in, which was 8.2 seconds.</p>
 <div style="margin:0px auto; text-align:center;">
 <img src="resources/images/process/usertesting-1.jpg" alt="resources/images/process/usertesting-1.jpg" style="margin:0px auto; width:580px; height:440px;"  />
  <br />
