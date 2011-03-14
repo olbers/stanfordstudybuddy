@@ -11,6 +11,8 @@ We observed that a lot of data centered around "studying experience" on campus h
 should be very useful to college students.</p>
 <div style="margin:0px auto; text-align:center;">
 <img src="resources/images/process/needfinding-1.jpg" alt="resources/images/process/needfinding-1.jpg" style="margin:0px auto; width:580px; height:440px;"  />
+<br />
+<br />
 <img src="resources/images/process/needfinding-2.jpg" alt="resources/images/process/needfinding-1.jpg" style="margin:0px auto; width:580px; height:440px;" />
 
 </div>
@@ -20,6 +22,8 @@ efficiently and frequently," we decided to make a mobile app that provides users
 what their friends are studying and how loud study spots are at the moment.</p>
 <div style="margin:0px auto; text-align:center;">
 <img src="resources/images/process/needfinding-3.jpg" alt="resources/images/process/needfinding-1.jpg" style="margin:0px auto; width:580px; height:440px;" />
+<br />
+<br />
 <img src="resources/images/process/needfinding-4.jpg" alt="resources/images/process/needfinding-1.jpg" style="margin:0px auto; width:580px; height:440px;" />
 
 </div>
@@ -36,6 +40,8 @@ We came up with the idea of "study logging" to collect those data inspired by th
 We started with doing a paper prototype so that we can get early design feedback.</p>
 <div style="margin:0px auto; text-align:center;">
 <img src="resources/images/process/paperprototyping-1.jpg" alt="resources/images/process/paperprototyping-1.jpg" style="margin:0px auto; width:580px; height:440px;"  />
+<br />
+<br />
 <img src="resources/images/process/paperprototyping-2.png" alt="resources/images/process/paperprototyping-2.png" style="margin:0px auto; width:580px; height:640px;" />
 
 </div>
@@ -84,6 +90,7 @@ write a native android app that would make a HTTP request to a server side back-
 <br />
 <div class="box">
 <h1>5. Beta Prototype</h1>
+<hr />
 <div style="margin:0px auto; text-align:center;">
 <img src="resources/images/process/beta-1.png" alt="resources/images/process/beta-1.png" style="margin:0px auto; width:333px; height:492px;"  />
  <br />
@@ -97,10 +104,32 @@ write a native android app that would make a HTTP request to a server side back-
 </div>
 
 
+
+<br />
+<br />
+<div class="box">
+<h1>6. User Testing</h1>
+<hr />
+<div style="margin:0px auto; text-align:center;">
+<img src="resources/images/process/usertesting-1.jpg" alt="resources/images/process/usertesting-1.jpg" style="margin:0px auto; width:580px; height:440px;"  />
+ <br />
+ <br />
+<img src="resources/images/process/usertesting-2.jpg" alt="resources/images/process/usertesting-2.jpg" style="margin:0px auto; width:580px; height:440px;" />
+ <br />
+ <br />
+<img src="resources/images/process/usertesting-3.jpg" alt="resources/images/process/usertesting-3.jpg" style="margin:0px auto; width:580px; height:440px;"  />
+  <br />
+ <br />
+<img src="resources/images/process/usertesting-4.jpg" alt="resources/images/process/usertesting-4.jpg" style="margin:0px auto; width:580px; height:440px;"  />
+ 
+</div>
+</div>
+
 <br />
 <br />
 <div class="box" id="finalversion">
 <h1>7. Final Version</h1>
+<hr />
 <div style="margin:0px auto; text-align:center;">
 <img src="resources/images/process/final-1.png" alt="resources/images/process/final-1.png" style="margin:0px auto; width:333px; height:492px;"  />
  <br />

@@ -6,7 +6,13 @@
 <html>
   <head>
     <title>Study Buddy</title>
-    <link rel="stylesheet" type="text/css" href="resources/stylesheets/style.css" />	
+    <link rel="stylesheet" type="text/css" href="resources/stylesheets/style.css" />
+    <script src="resources/inc/cufon-yui.js" type="text/javascript"></script>
+	<script src="resources/inc/droid-sans.fonts.js" type="text/javascript"></script>
+    <script src="resources/inc/grobold.fonts.js" type="text/javascript"></script>
+	<script type="text/javascript">
+      Cufon.replace('#logo', { fontFamily: 'Droid Sans Bold' }); 
+    </script>	
   </head>
   <body style="height:100%;" onload="startSlideShow(0);">
 	<script type="text/javascript">
