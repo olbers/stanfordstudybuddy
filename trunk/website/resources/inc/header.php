@@ -36,6 +36,7 @@
     <a href="index.php">Home</a> <br />
     <a href="process.php">Process</a> <br />
     <a href="slide-show.php">Slide Show</a> <br />
+    <a href="resources/files/cs247_poster.pdf">Poster</a> <br />
     <a href="people.php">Study Buddy Team</a> <br />
     
     <!--
