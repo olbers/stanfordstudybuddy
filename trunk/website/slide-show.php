@@ -58,7 +58,7 @@
     <a href="index.php">Home</a> <br />
     <a href="process.php">Process</a> <br />
     <a href="slide-show.php">Slide Show</a> <br />
-    <a href="resources/files/cs247_poster.pdf">Poster</a> (PDF, Size: 75MB) <br />
+    <a href="resources/files/poster.jpg">Poster</a> <br />
     <a href="people.php">Study Buddy Team</a> <br />
     <!--
     <ul style="margin-top:-10px; margin-bottom:0px; padding-top:0px; padding-bottom:0px;">
